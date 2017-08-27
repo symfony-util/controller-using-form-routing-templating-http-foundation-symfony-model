@@ -1,0 +1,33 @@
+{
+    "name": "symfony-util/controller-using-form-routing-templating-http-foundation-symfony-model",
+    "description": "Controllers which render or process a Form and return a (Redirect)Response passing the Request to the Model",
+    "keywords": ["controller", "symfony", "snowyowl"],
+    "homepage": "https://github.com/symfony-util/controller-using-form-routing-templating-http-foundation-symfony-model",
+    "license": "ISC",
+    "authors": [
+        {"name": "Jean-bernard Addor"},
+        {"name": "Community", "homepage": "https://github.com/symfony-util/controller-using-form-routing-templating-http-foundation-symfony-model"}
+    ],
+    "require": {
+        "symfony/form": "^2.0 || ^3.0 || ^4.0",
+        "symfony/http-foundation": "^2.0 || ^3.0 || ^4.0",
+        "symfony/routing": "^2.0 || ^3.0 || ^4.0",
+        "symfony/templating": "^2.0 || ^3.0 || ^4.0"
+    },
+    "require-dev": {
+        "symfony/twig-bridge": "^2.0 || ^3.0 || ^4.0",
+        "symfony/var-dumper": "^2.0 || ^3.0 || ^4.0",
+        "twig/twig": "^1.0 || ^2.0"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": { "SymfonyUtil\\Component\\FormRoutingTemplatingHttpFoundation\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
+
