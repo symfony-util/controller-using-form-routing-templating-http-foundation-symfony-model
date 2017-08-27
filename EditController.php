@@ -48,22 +48,22 @@ class NewController /////////////////////////////////// InsertController
         $this->template = $template;
     }
 
-    public function __invoke(Request $request = new Request())
+    public function __invoke($id, Request $request = new Request())
     {
-        $form = $formFactory->create($this->formClass); /////////////////////// données par defaut...
+        $form = $formFactory->create($this->formClass, $this->model->show($id, $request));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
             return new RedirectResponse($this->urlGenerator->generate(
                 $this-routeName,
-                $this->model->insert($form->getData(), $request)
+                $this->model->update($id, $form->getData(), $request)
             ));
         }
         // return new Response($this->templating->render($this->template, $this->model->...($form, $request)));
 
         return new Response($this->templating->render($this->template, [
             'form' => $form->createView(),
-        ]));
+        ])); /////////////////////////////////////////////////////////////////////////////////////////!!!
     }
 }
