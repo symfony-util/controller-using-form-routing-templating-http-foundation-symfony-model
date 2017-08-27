@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Templating\EngineInterface;
 
-class NewController
+class NewController /////////////////////////////////// InsertController
 {
     protected $formFactory;
     protected $formClass;
@@ -50,7 +50,7 @@ class NewController
 
     public function __invoke(Request $request = new Request())
     {
-        $form = $formFactory->create($this->formClass);
+        $form = $formFactory->create($this->formClass); /////////////////////// données par defaut...
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
